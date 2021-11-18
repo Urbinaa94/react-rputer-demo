@@ -1,11 +1,12 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
-const Home = () => (
- <div>
-  <h2>Home</h2>
- </div>
-);
+  const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+  );
+
 
 const Category = () => (
  <div>
@@ -37,9 +38,12 @@ export default function App() {
     </nav>
  {/* Los componentes de la ruta se representan si la propieda
 d de la ruta coincide con la URL actual */}
-    <Route path="/"><Home /></Route>
-    <Route path="/category"><Category /></Route>
-    <Route path="/products"><Products /></Route>
+    
+    <Routes>
+      <Route path="/"><Home /></Route>
+      <Route path="/category"><Category /></Route>
+      <Route path="/products"><Products /></Route>
+    </Routes>
   </div>
  );
 }
